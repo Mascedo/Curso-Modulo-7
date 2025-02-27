@@ -5,13 +5,13 @@ const atualizar = require('./atualizar');
 const remover = require('./remover');
 const buscar = require('./buscar.js');
 
-let lista =[{ id: 1439818088849, no: 'mascedo', ma: '210', cs: 'cs', an: '1' },
-            { id: 1559818088849, no: 'juan', ma: '211', cs: 'cs', an: '2' },
-            { id: 1169818088849, no: 'pablo', ma: '213', cs: 'flick', an: '1' },
-            { id: 1233818088849, no: 'ezaki', ma: '212', cs: 'houm', an: '3' },
-            { id: 1113818088849, no: 'voto', ma: '219', cs: 'houm', an: '1' },
-            { id: 1112818088849, no: 'vato', ma: '219', cs: 'erj', an: '1' },
-            { id: 1111818081922, no: 'pato', ma: '220', cs: 'jre', an: '2' }]
+let lista =[{ id: 1439818088849, nome: 'mascedo', matricula: '210', curso: 'cs', ano: '1' },
+            { id: 1559818088849, nome: 'juan', matricula: '211', curso: 'cs', ano: '2' },
+            { id: 1169818088849, nome: 'pablo', matricula: '213', curso: 'flick', ano: '1' },
+            { id: 1233818088849, nome: 'ezaki', matricula: '212', curso: 'houm', ano: '3' },
+            { id: 1113818088849, nome: 'voto', matricula: '219', curso: 'houm', ano: '1' },
+            { id: 1112818088849, nome: 'vato', matricula: '219', curso: 'erj', ano: '1' },
+            { id: 1111818081922, nome: 'pato', matricula: '220', curso: 'jre', ano: '2' }]
 menu()
 function menu(){
 console.log(`
@@ -50,7 +50,7 @@ console.log(`
         menu()
         break;
         case 5:
-        let cond = prompt('filtro desejado(no = nome, ma = matricula, cs = curso): ')
+        let cond = prompt('filtro desejado(nome, matricula, curso): ')
         let tipo = prompt('somente iguais a:')
         buscar(lista,cond,tipo)
         menu()

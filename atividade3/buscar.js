@@ -1,15 +1,15 @@
 function buscar(lista,cont,tipo){
-    if(['ti', 'di', 'an', 'ge'].includes(cont)){
-        let nArr = lista.filter(rr => rr[cont] === tipo)
-        if(nArr.length>0){
+    if(['titulo', 'diretor', 'ano', 'genero'].includes(cont)){
+        let novoArr = lista.filter(filmes => filmes[cont] === tipo)
+        if(novoArr.length>0){
             console.log('Filmes com este filtro:')
-            nArr.forEach(livro => {
+            novoArr.forEach(filme => {
                 console.log('--------------------------')
-                console.log(`ID: ${livro.id}`)
-                console.log(`Titulo: ${livro.ti}`)
-                console.log(`Diretor: ${livro.di}`)
-                console.log(`Ano: ${livro.an}`)
-                console.log(`Genero: ${livro.ge}`)
+                console.log(`ID: ${filme.id}`)
+                console.log(`Titulo: ${filme.titulo}`)
+                console.log(`Diretor: ${filme.diretor}`)
+                console.log(`Ano: ${filme.ano}`)
+                console.log(`Genero: ${filme.genero}`)
                 });
             }
     }else{

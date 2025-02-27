@@ -1,10 +1,10 @@
-function atualizar(lista,id,ti,au,an,ge){
+function atualizar(lista,id,titulo,autor,ano,genero){
     let idIndex = lista.findIndex(contato => contato.id === id)
     if(idIndex !== -1&&lista[idIndex].id === id){
-        lista[idIndex].ti = ti
-        lista[idIndex].au = au
-        lista[idIndex].an = an
-        lista[idIndex].ge = ge
+        lista[idIndex].titulo = titulo
+        lista[idIndex].autor = autor
+        lista[idIndex].ano = ano
+        lista[idIndex].genero = genero
         console.log('Atualizado, use 2 para verificar.')
         return lista;
     }else{

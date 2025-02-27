@@ -1,7 +1,7 @@
 function remover(lista,id){
-    let vArr = lista.find(titi => titi.id === id)
-    let nArr = lista.filter(titi => titi.id !== id)
-    if(!vArr){
+    let verificarArr = lista.find(filmes => filmes.id === id)
+    let nArr = lista.filter(filme => filme.id !== id)
+    if(!verificarArr){
         console.log('ID de remoção nao encontrado!')
         return;
     }else{

@@ -5,13 +5,13 @@ const atualizar = require('./atualizar');
 const remover = require('./remover');
 const buscar = require('./buscar.js');
 
-let lista =[{ id: 1439818088849, ti: 'grande arroz', au: 'rr2', an: '2010', ge: 'arrox' },
-            { id: 1559818088849, ti: 'arroz frito', au: 'rr2', an: '2011', ge: 'arrox' },
-            { id: 1169818088849, ti: 'dumidara', au: 'rato', an: '2010', ge: 'ratol' },
-            { id: 1233818088849, ti: 'ncinema', au: 'eimul', an: '2020', ge: 'romance' },
-            { id: 1113818088849, ti: 'japao', au: 'fassomoto', an: '1935', ge: 'funcao' },
-            { id: 1112818088849, ti: 'cinema', au: 'lumie', an: '2020', ge: 'cinema' },
-            { id: 1111818081922, ti: 'uniao sovietica', au: 'jose stanley', an: '1991', ge: 'sumiu' }]
+let lista =[{ id: 1439818088849, titulo: 'grande arroz', autor: 'rr2', ano: '2010', genero: 'arrox' },
+            { id: 1559818088849, titulo: 'arroz frito', autor: 'rr2', ano: '2011', genero: 'arrox' },
+            { id: 1169818088849, titulo: 'dumidara', autor: 'rato', ano: '2010', genero: 'ratol' },
+            { id: 1233818088849, titulo: 'ncinema', autor: 'eimul', ano: '2020', genero: 'romance' },
+            { id: 1113818088849, titulo: 'japao', autor: 'fassomoto', ano: '1935', genero: 'funcao' },
+            { id: 1112818088849, titulo: 'cinema', autor: 'lumie', ano: '2020', genero: 'cinema' },
+            { id: 1111818081922, titulo: 'uniao sovietica', autor: 'jose stanley', ano: '1991', genero: 'sumiu' }]
 menu()
 function menu(){
 console.log(`
@@ -50,7 +50,7 @@ console.log(`
         menu()
         break;
         case 5:
-        let cond = prompt('filtro desejado(ti = titulo, au = autor, an = ano, ge = genero): ')
+        let cond = prompt('filtro desejado(titulo, autor, ano, genero): ')
         let tipo = prompt('somente iguais a:')
         buscar(lista,cond,tipo)
         menu()

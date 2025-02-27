@@ -1,5 +1,5 @@
-function adicionar(lista,ti,di,an,ge){
+function adicionar(lista,titulo,diretor,ano,genero){
     let id = Date.now()
-    lista.push({id,ti,di,an,ge})
+    lista.push({id,titulo,diretor,ano,genero})
 }
 module.exports = adicionar

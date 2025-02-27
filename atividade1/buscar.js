@@ -1,15 +1,15 @@
-function buscar(lista,cont,tipo){
-    if(['ti', 'au', 'an', 'ge'].includes(cont)){
-        let nArr = lista.filter(rr => rr[cont] === tipo)
-        if(nArr.length>0){
+function buscar(lista,select,tipo){
+    if(['titulo', 'autor', 'ano', 'genero'].includes(select)){
+        let novoArr = lista.filter(livros => livros[select] === tipo)
+        if(novoArr.length>0){
             console.log('Livros com este filtro:')
-            nArr.forEach(livro => {
+            novoArr.forEach(livro => {
                 console.log('--------------------------')
                 console.log(`ID: ${livro.id}`)
-                console.log(`Titulo: ${livro.ti}`)
-                console.log(`Autor: ${livro.au}`)
-                console.log(`Ano: ${livro.an}`)
-                console.log(`Genero: ${livro.ge}`)
+                console.log(`Titulo: ${livro.titulo}`)
+                console.log(`Autor: ${livro.autor}`)
+                console.log(`Ano: ${livro.ano}`)
+                console.log(`Genero: ${livro.genero}`)
                 });
             }
     }else{

@@ -1,11 +1,11 @@
-function lista(f){
-    f.forEach(filme => {
+function lista(filmes){
+    filmes.forEach(filme => {
         console.log('--------------------------')
         console.log(`ID: ${filme.id}`)
-        console.log(`Titulo: ${filme.ti}`)
-        console.log(`Diretor: ${filme.di}`)
-        console.log(`Ano: ${filme.an}`)
-        console.log(`Genero: ${filme.ge}`)
+        console.log(`Titulo: ${filme.titulo}`)
+        console.log(`Diretor: ${filme.diretor}`)
+        console.log(`Ano: ${filme.ano}`)
+        console.log(`Genero: ${filme.genero}`)
     });
 }
 module.exports = lista
