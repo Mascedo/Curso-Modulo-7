@@ -5,13 +5,13 @@ const atualizar = require('./atualizar');
 const remover = require('./remover');
 const buscar = require('./buscar.js');
 
-let lista =[{ id: 1439818088849, no: 'arroz', ca: 'alimento', pr: '30', es: '200' },
-            { id: 1559818088849, no: 'feijao', ca: 'alimento', pr: '25', es: '120' },
-            { id: 1169818088849, no: 'cafe', ca: 'patrimonio', pr: '70', es: '11' },
-            { id: 1233818088849, no: 'pinhosol', ca: 'limpeza', pr: '20', es: '110' },
-            { id: 1113818088849, no: 'sabao', ca: 'limpeza', pr: '2', es: '300'  },
-            { id: 1112818088849, no: 'tijolo', ca: 'construcao', pr: '20', es: '200'  },
-            { id: 1111818081922, no: 'cimento', ca: 'construcao', pr: '40', es: '30' }]
+let lista =[{ id: 1439818088849, nome: 'arroz', categoria: 'alimento', preco: '30', estoque: '200' },
+            { id: 1559818088849, nome: 'feijao', categoria: 'alimento', preco: '25', estoque: '120' },
+            { id: 1169818088849, nome: 'cafe', categoria: 'patrimonio', preco: '70', estoque: '11' },
+            { id: 1233818088849, nome: 'pinhosol', categoria: 'limpeza', preco: '20', estoque: '110' },
+            { id: 1113818088849, nome: 'sabao', categoria: 'limpeza', preco: '2', estoque: '300'  },
+            { id: 1112818088849, nome: 'tijolo', categoria: 'construcao', preco: '20', estoque: '200'  },
+            { id: 1111818081922, nome: 'cimento', categoria: 'construcao', preco: '40', estoque: '30' }]
 menu()
 function menu(){
 console.log(`
@@ -50,9 +50,9 @@ console.log(`
         menu()
         break;
         case 5:
-        let cond = prompt('filtro desejado(no = nome, ca = categoria, pr = preço, es = estoque): ')
+        let filtro = prompt('filtro desejado(nome, categoria, preco, estoque): ')
         let tipo = prompt('somente iguais a:')
-        buscar(lista,cond,tipo)
+        buscar(lista,filtro,tipo)
         menu()
         break;
         default:

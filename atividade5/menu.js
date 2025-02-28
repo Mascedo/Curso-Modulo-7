@@ -5,13 +5,13 @@ const atualizar = require('./atualizar');
 const remover = require('./remover');
 const buscar = require('./buscar.js');
 
-let lista =[{ id: 1439818088849, no: 'gabriel', ca: 'junior', de: 'armazenamento', sa: '1400'},
-            { id: 1559818088849, no: 'juan', ca: 'pleno', de: 'suporte', sa: '1500'},
-            { id: 1169818088849, no: 'pablo', ca: 'junior', de: 'armazenamento', sa: '1400'},
-            { id: 1233818088849, no: 'ezaki', ca: 'senior', de: 'atendimento', sa: '1900'},
-            { id: 1113818088849, no: 'voto', ca: 'junior', de: 'suporte', sa: '1300'},
-            { id: 1112818088849, no: 'vato', ca: 'pleno', de: 'atendimento', sa: '1700'},
-            { id: 1111818081922, no: 'pato', ca: 'senior', de: 'armazenamento', sa: '1600'}]
+let lista =[{ id: 1439818088849, nome: 'gabriel', cargo: 'junior', departamento: 'armazenamento', salario: '1400'},
+            { id: 1559818088849, nome: 'juan', cargo: 'pleno', departamento: 'suporte', salario: '1500'},
+            { id: 1169818088849, nome: 'pablo', cargo: 'junior', departamento: 'armazenamento', salario: '1400'},
+            { id: 1233818088849, nome: 'ezaki', cargo: 'senior', departamento: 'atendimento', salario: '1900'},
+            { id: 1113818088849, nome: 'voto', cargo: 'junior', departamento: 'suporte', salario: '1300'},
+            { id: 1112818088849, nome: 'vato', cargo: 'pleno', departamento: 'atendimento', salario: '1700'},
+            { id: 1111818081922, nome: 'pato', cargo: 'senior', departamento: 'armazenamento', salario: '1600'}]
 menu()
 function menu(){
 console.log(`
@@ -50,7 +50,7 @@ console.log(`
         menu()
         break;
         case 5:
-        let cond = prompt('filtro desejado(no = nome, ca = cargo, de = departamento, sa = salario): ')
+        let cond = prompt('filtro desejado(nome, cargo, departamento, salario): ')
         let tipo = prompt('somente iguais a:')
         buscar(lista,cond,tipo)
         menu()
